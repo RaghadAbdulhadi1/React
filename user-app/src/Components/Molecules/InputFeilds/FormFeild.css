@@ -1,0 +1,25 @@
+.input-feild {
+  height: 50px;
+  margin-top: var(--margin);
+  margin-top: var(--margin);
+  position: relative;
+  width: var(--width);
+}
+
+.input-feild input {
+  font-size: var(--fontsize);
+  height: 100%;
+  padding: 0 55px;
+  width: var(--width);
+}
+
+svg {
+  background-color: var(--blue);
+  font-size: 20px;
+  left: 0;
+  padding: 15px;
+  position: absolute;
+  top: var(--halfwidth);
+  transform: translateY(-50%);
+  width: 9.5%;
+}
