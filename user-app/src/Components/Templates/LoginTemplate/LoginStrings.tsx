@@ -1,7 +1,7 @@
 enum loginRequirements {
-    type = 'login',
     email = 'email',
     password = 'password',
+    type = 'login',
 }
 
 export default loginRequirements;

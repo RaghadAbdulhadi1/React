@@ -1,19 +1,26 @@
 import "./LoginTemplate.css";
 import { FC, useState } from "react";
+import { getLocalStorage } from "../../Utils/LocalStorage/LocalStorage";
 import { Title } from "../../Atoms/Div/DivStrings";
 import FormHeader from "../../Organisms/Shared/FormHeader";
 import LoginForm from "../../Organisms/LoginForm/LoginForm";
 import loginRequirements from "./LoginStrings";
-import getLocalStorage from "../../Utils/LocalStorage/LocalStorage";
+import Modal from "../../Molecules/Modal/index";
 
-const LoginTemplate: FC = (): JSX.Element => {
-  type Values = {
-    email: string;
-    password: string;
-  };
+interface LoginTemplateProps {
+  handleLinkClick: React.MouseEventHandler<HTMLAnchorElement>;
+}
 
-  type Validator = boolean;
+type Values = {
+  email: string;
+  password: string;
+};
 
+type Validator = boolean;
+
+const LoginTemplate: FC<LoginTemplateProps> = (
+  props: LoginTemplateProps
+): JSX.Element => {
   const [values, setValues] = useState<Values>({
     email: "",
     password: "",
@@ -52,18 +59,34 @@ const LoginTemplate: FC = (): JSX.Element => {
     setValues({ ...values, [event.target.name]: event.target.value });
   };
 
+  const handleOnBlur = (
+    event: React.FocusEvent<HTMLInputElement>
+  ): void => {console.log(event.target.name)};
+
+  const handleOnFocus = (
+    event: React.FocusEvent<HTMLInputElement>
+  ): void => {console.log(event.target.value)};
+
+  const handleOnInput = (
+    event: React.FocusEvent<HTMLInputElement>
+  ): void => {console.log(event.target.value)};
+
   return (
     <div className="login-form">
       <FormHeader formTitle={Title.Login} />
       <LoginForm
         formType={loginRequirements.type}
         handleChange={handleChange}
+        handleLinkClick={props.handleLinkClick}
         handleSubmit={handleSubmit}
         inputTypes={[loginRequirements.email, loginRequirements.password]}
-        withIcon={false}
-        isValidatedLogin={successValidator}
         isValidatedEmail={emailValidator}
+        isValidatedLogin={successValidator}
         isValidatedPassword={passwordValidator}
+        onBlur={handleOnBlur}
+        onFocus={handleOnFocus}
+        onInput={handleOnInput}
+        withIcon={false}
       />
     </div>
   );

@@ -1,18 +1,35 @@
-import { FC } from "react";
+import "./FormsPage.css";
+import { FC, useState } from "react";
 import LoginTemplate from "../../Templates/LoginTemplate/LoginTemplate";
 import RegisterTemplate from "../../Templates/RegisterTemplate/RegisterTemplate";
-import "./FormsPage.css";
+import Modal from "../../Molecules/Modal/index";
 
-interface FormsPageProps {}
+const FormsPage: FC = (): JSX.Element => {
+  const [active, setActive] = useState(true);
+  const [openModal, setOpenModal] = useState(false);
 
-const FormsPage: FC<FormsPageProps> = () => {
+  const handleLinkClick = (): void => setActive((active): boolean => !active);
+
+  const handleMClick = (): void => {
+    setOpenModal(!openModal)
+  }
+
+  const handleExitClick = (): void => {
+    setOpenModal(!openModal)
+  }
+
+
   return (
-    <div className="forms-container">
+    <>
+    <div className={`forms-container ${active ? "" : "active"}`}>
       <div className="forms">
-        <LoginTemplate />
-        <RegisterTemplate />
+        <LoginTemplate handleLinkClick={handleLinkClick} />
+        <RegisterTemplate handleLinkClick={handleLinkClick} handleMClick={handleMClick} />
       </div>
     </div>
+      {openModal && <Modal handleExitClick={handleExitClick}/> }
+    </>
+
   );
 };
 

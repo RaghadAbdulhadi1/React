@@ -1,9 +1,9 @@
 enum registerRequirements {
-    type = 'register',
-    email = 'email',
-    username = 'username',
-    password = 'password',
     confirmPassword = 'confirm-password',
+    email = 'email',
+    password = 'password',
+    type = 'register',
+    username = 'username',
 
 }
 

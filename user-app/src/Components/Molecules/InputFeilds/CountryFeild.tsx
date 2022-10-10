@@ -1,8 +1,7 @@
+import "./CountryFeild.css";
 import { FunctionComponent } from "react";
 import COUNTRY_CHOICES from "../../Atoms/Option/OptionFeildStrings";
-import Option from "../../Atoms/Option/Option";
-import "./CountryFeild.css";
-
+import Option from "../../Atoms/Option/index";
 
 const CountryFeild: FunctionComponent = () => {
   return (

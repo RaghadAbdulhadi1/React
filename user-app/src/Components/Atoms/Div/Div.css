@@ -1,7 +1,6 @@
 .title {
-    color: var(--blue);
-    font-size: var(--margin);
-    font-weight: bold;
-    text-align: center;
-  }
-  
+  color: var(--blue);
+  font-size: var(--margin);
+  font-weight: bold;
+  text-align: center;
+}

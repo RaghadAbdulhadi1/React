@@ -21,7 +21,7 @@
   align-items: center;
   background-color: var(--blue);
   display: flex;
-  height: 120vh;
+  height: 100vh;
   justify-content: center;
   padding: 50px;
 }
@@ -45,4 +45,10 @@
 
 .forms-container.active .forms {
   height: auto;
+}
+
+@media only screen and (max-width: 400px) {
+  #root {
+    height: 130vh;
+  }
 }

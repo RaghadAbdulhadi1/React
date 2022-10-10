@@ -1,5 +1,6 @@
-.login-button {
+.register-button {
   display: flex;
   gap: var(--margin);
   align-items: flex-end;
 }
+

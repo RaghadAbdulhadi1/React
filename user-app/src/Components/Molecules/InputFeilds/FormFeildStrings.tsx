@@ -1,13 +1,13 @@
 export enum inputTypes {
+  confirmPassword = "confirmPassword",
   email = "email",
   password = "password",
   username = "username",
-  confirmPassword = "confirmPassword",
 };
 
 export enum feildsPlaceholder {
+  confirmPassword = "Confirm your password",
   email = "Enter your email",
   password = "Enter your password",
   username = "Enter your username",
-  confirmPassword = "Confirm your password",
 };

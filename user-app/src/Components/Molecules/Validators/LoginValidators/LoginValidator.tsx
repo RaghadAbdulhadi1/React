@@ -1,23 +1,25 @@
-import { FC } from "react";
-import Paragraph from "../../Atoms/Paragraph/Paragraph";
-import { VALIDATION_CONTENT } from "./LoginValidatorStrings";
 import "./LoginValidators.css";
+import { FC } from "react";
+import { VALIDATION_CONTENT } from "./LoginValidatorStrings";
+import Paragraph from "../../../Atoms/Paragraph";
 
 interface LoginValidatorProps {
-  isValidatedLogin: boolean;
   isValidatedEmail: boolean;
+  isValidatedLogin: boolean;
   isValidatedPassword: boolean;
 }
 
-const LoginValidator: FC<LoginValidatorProps> = (props) => {
+const LoginValidator: FC<LoginValidatorProps> = (props): JSX.Element => {
   return (
-    <div className="validationContent login-validation">
+    <div className="validation-content">
       <Paragraph
         className={props.isValidatedLogin ? "success-succ" : "success-failure"}
         innerText={VALIDATION_CONTENT["LOGGED_IN_SUCCESS"]}
       />
       <Paragraph
-        className={props.isValidatedPassword ? "success-succ" : "password-failure"}
+        className={
+          props.isValidatedPassword ? "success-succ" : "password-failure"
+        }
         innerText={VALIDATION_CONTENT["PASSWORD_CHECK"]}
       />
       <Paragraph

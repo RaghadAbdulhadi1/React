@@ -1,7 +1,7 @@
+import "./GenderFeild.css";
 import { FunctionComponent } from "react";
-import Radio from "../../Atoms/Radio/Radio";
+import Radio from "../../Atoms/Radio/index";
 import RadioChoices from "../../Atoms/Radio/RadioStrings";
-import "./GenderFeild.css"
 
 const GenderFeild: FunctionComponent = (): JSX.Element => {
   const FEMALE = RadioChoices.Female;

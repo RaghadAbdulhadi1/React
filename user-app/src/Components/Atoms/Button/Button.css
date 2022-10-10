@@ -1,10 +1,4 @@
-.login-button,
-.register-button {
-  display: flex;
-  gap: var(--margin);
-}
-
-button {
+#form-buttons {
   background-color: var(--blue);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   color: var(--white);
@@ -12,6 +6,6 @@ button {
   font-weight: bold;
   height: 50px;
   margin-top: var(--margin);
-  width: 100px;
   text-transform: capitalize;
+  width: 100px;
 }

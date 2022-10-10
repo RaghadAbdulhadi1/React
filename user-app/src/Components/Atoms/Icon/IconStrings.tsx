@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 
 enum IconSVG {
-  email = "email",
-  username = "username",
-  password = "password",
   confirmPassword = "confirm-password",
+  email = "email",
+  password = "password",
+  username = "username",
 }
 
 const IconWidth = "1em";

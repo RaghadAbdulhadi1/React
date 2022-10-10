@@ -1,6 +1,6 @@
 import { FC } from "react";
-import Div from "../../Atoms/Div/Div";
-import LineBreak from "../../Atoms/LineBreak/LineBreak";
+import Div from "../../Atoms/Div/index";
+import LineBreak from "../../Atoms/LineBreak/index";
 
 interface FormHeaderProps {
   formTitle: string;

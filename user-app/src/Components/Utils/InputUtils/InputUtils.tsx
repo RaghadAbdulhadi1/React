@@ -10,5 +10,5 @@ export const checkPlaceholderType = (type: string): string => {
     ? feildsPlaceholder.password
     : type === inputTypes.username
     ? feildsPlaceholder.username
-    : feildsPlaceholder.confirmPassword
+    : feildsPlaceholder.confirmPassword;
 };
